@@ -153,10 +153,11 @@ public class GoBildaRi3D2425 extends LinearOpMode {
 
 
         /* Define and Initialize Motors */
+        /*make sure names match driver hub*/
         leftFrontDrive  = hardwareMap.dcMotor.get("frontLeftMotor");
-        leftBackDrive   = hardwareMap.dcMotor.get("backLeftMotor");
+        leftBackDrive   = hardwareMap.dcMotor.get("rearLeftMotor");
         rightFrontDrive = hardwareMap.dcMotor.get("frontRightMotor");
-        rightBackDrive  = hardwareMap.dcMotor.get("backRightMotor");
+        rightBackDrive  = hardwareMap.dcMotor.get("rearRightMotor");
         liftMotor       = hardwareMap.dcMotor.get("liftMotor");
         armMotor        = hardwareMap.get(DcMotor.class, "left_arm"); //the arm motor
         hangMotor       = hardwareMap.dcMotor.get("hangMotor");
@@ -197,6 +198,7 @@ public class GoBildaRi3D2425 extends LinearOpMode {
         liftMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
         /* Define and initialize servos.*/
+        //make sure same as dricer hub//
         intake = hardwareMap.get(CRServo.class, "intake");
         wrist  = hardwareMap.get(Servo.class, "wrist");
 
